@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
+using CharacterSheetApp.Models;
 
 namespace CharacterSheetApp.Controllers
 {
@@ -11,8 +12,10 @@ namespace CharacterSheetApp.Controllers
 	{
 		public ActionResult Index()
 		{
-			var name = "Shield";
-			return View("Index", name);
+			var model = new CharacterSheetApp.Models.Equipment ();
+			model.Name = "Shield";
+
+			return View("Index", model);
 		}
 	}
 }
