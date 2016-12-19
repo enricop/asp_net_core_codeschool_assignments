@@ -5,7 +5,14 @@
 </head>
 <body>
 	@model CharacterSheetApp.Models.Equipment
-	<h2>Equipment</h2>
+	<h2>Equipment:</h2>
+
+	<form asp-action="Create" class="form-inline mbm">
+  		<div class="form-group">
+			<input name="EquipmentName" />
+			<input type="submit" value="Add Equipment" class="form-control" />
+  		</div>
+	</form>
 
 	<div>
 	  <ul>

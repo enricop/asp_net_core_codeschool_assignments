@@ -12,10 +12,16 @@ namespace CharacterSheetApp.Controllers
 	{
 		public ActionResult Index()
 		{
-			var model = new CharacterSheetApp.Models.Equipment ();
+			var model = new CharacterSheetApp.Models.Equipment();
 			model.Name = "Shield";
+			return View(model);
+		}
 
-			return View("Index", model);
+		public ActionResult Create(string EquipmentName)
+		{
+			var model = new CharacterSheetApp.Models.Equipment();
+			model.Name = EquipmentName;
+			return View("Index",model);
 		}
 	}
 }
